@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Transportation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Transportation System</h1>
+
+        <!-- Vehicle Registration Section -->
+        <section class="form-section">
+            <h2>Register a Vehicle</h2>
+            <label for="vehicleId">Vehicle ID</label>
+            <input type="text" id="vehicleId" placeholder="Enter Vehicle ID">
+            <label for="ownerName">Owner Name</label>
+            <input type="text" id="ownerName" placeholder="Enter Owner Name">
+            <button class="action-btn" onclick="registerVehicle()">Register Vehicle</button>
+        </section>
+
+        <hr />
+
+        <!-- Start Trip Section -->
+        <section class="form-section">
+            <h2>Start a Trip</h2>
+            <label for="tripVehicleId">Vehicle ID</label>
+            <input type="text" id="tripVehicleId" placeholder="Enter Vehicle ID">
+            <label for="startLocation">Start Location</label>
+            <input type="text" id="startLocation" placeholder="Enter Start Location">
+            <button class="action-btn" onclick="startTrip()">Start Trip</button>
+        </section>
+
+        <hr />
+
+        <!-- End Trip Section -->
+        <section class="form-section">
+            <h2>End a Trip</h2>
+            <label for="tripId">Trip ID</label>
+            <input type="text" id="tripId" placeholder="Enter Trip ID">
+            <label for="endLocation">End Location</label>
+            <input type="text" id="endLocation" placeholder="Enter End Location">
+            <label for="paymentAmount">Payment Amount (ETH)</label>
+            <input type="text" id="paymentAmount" placeholder="Enter Payment Amount in ETH">
+            <button class="action-btn" onclick="endTrip()">End Trip</button>
+        </section>
+
+        <hr />
+
+        <!-- Get Vehicle Details Section -->
+        <section class="form-section">
+            <h2>Get Vehicle Details</h2>
+            <label for="vehicleDetailsId">Vehicle ID</label>
+            <input type="text" id="vehicleDetailsId" placeholder="Enter Vehicle ID">
+            <button class="action-btn" onclick="getVehicleDetails()">Get Details</button>
+            <div id="vehicleDetails" class="details-box"></div>
+        </section>
+
+        <hr />
+
+        <!-- Get Trip Details Section -->
+        <section class="form-section">
+            <h2>Get Trip Details</h2>
+            <label for="tripDetailsId">Trip ID</label>
+            <input type="text" id="tripDetailsId" placeholder="Enter Trip ID">
+            <button class="action-btn" onclick="getTripDetails()">Get Details</button>
+            <div id="tripDetails" class="details-box"></div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

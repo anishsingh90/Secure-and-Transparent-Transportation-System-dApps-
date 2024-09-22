@@ -1,0 +1,93 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Light background for wide screens */
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #0056b3;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003d7a;
+}
+
+.form-section {
+    margin: 20px 0;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+.details-box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.action-btn {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    /* Change background color for smaller screens */
+    body {
+        background-color: #ffe0b2; /* Warm background for smaller screens */
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Additional change for very small screens */
+    body {
+        background-color: #ffcdd2; /* Soft pink background for extra small screens */
+    }
+}
