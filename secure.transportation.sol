@@ -133,7 +133,7 @@ contract SecureTransportationSystem {
         return vehicles[_vehicleId];
     }
 
-    // Retrieve trip details
+    // Retrieve trip details 
     function getTripDetails(uint _tripId) public view returns (Trip memory) {
         return trips[_tripId];
     }
