@@ -1,0 +1,385 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tripId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "vehicleId",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "endLocation",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "endTime",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "paymentAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "TripEnded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tripId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "vehicleId",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "startLocation",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "startTime",
+						"type": "uint256"
+					}
+				],
+				"name": "TripStarted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "vehicleId",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ownerName",
+						"type": "string"
+					}
+				],
+				"name": "VehicleRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tripId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_endLocation",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_paymentAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "endTrip",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tripId",
+						"type": "uint256"
+					}
+				],
+				"name": "getTripDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "vehicleId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "startLocation",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "endLocation",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "startTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "endTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "paymentAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isCompleted",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct SecureTransportationSystem.Trip",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_vehicleId",
+						"type": "string"
+					}
+				],
+				"name": "getVehicleDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "vehicleId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "ownerName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "currentRoute",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isRegistered",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct SecureTransportationSystem.Vehicle",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_vehicleId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_ownerName",
+						"type": "string"
+					}
+				],
+				"name": "registerVehicle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_vehicleId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_startLocation",
+						"type": "string"
+					}
+				],
+				"name": "startTrip",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tripCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "trips",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "vehicleId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "startLocation",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "endLocation",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "paymentAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isCompleted",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "vehicles",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "vehicleId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ownerName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "currentRoute",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isRegistered",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"secure.transportation.sol": "SecureTransportationSystem"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"secure.transportation.sol": {
+			"keccak256": "0xa31e113439603bd38d3c185755ff1039105d51f4e621caac9fcc5e709c037e38",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://84292c22030102993750a1cf41780277e86b1833f2021d7c54be80eee30daf0e",
+				"dweb:/ipfs/QmTqQZX7swxGSQt5fQRobft9A1pe3uHL7PJDs3zppT3snf"
+			]
+		}
+	},
+	"version": 1
+}
