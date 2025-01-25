@@ -1,8 +1,7 @@
 # 🚚 Secure Transportation System using Blockchain and IoT  
 ### 🛡️ Enhancing Security and Transparency in Transportation  
 
-**👤 Author:** Anish Kumar  
-**📅 Date:** [Insert Date]  
+**👤 Author:** Anish Kumar   
 
 ---
 
