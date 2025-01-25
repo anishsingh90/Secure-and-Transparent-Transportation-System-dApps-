@@ -59,8 +59,8 @@ To develop a secure, transparent, and efficient transportation system by integra
 - 📶 **Communication Modules (Wi-Fi, GSM):** For data transmission to the Blockchain.  
 
 ### 💾 Database  
-- 🗂️ **IPFS/Decentralized Storage:** For storing non-transactional data securely.  
-- 🐬 **MongoDB/MySQL:** For traditional database requirements.  
+- 🗂️ **IPFS:** For storing non-transactional data securely.  
+- 🐬 **MySQL:** For traditional database requirements.  
 
 ### ⚙️ Development Tools  
 - 🧪 **Truffle Suite/Remix:** For Smart Contract development and testing.  
